@@ -1,0 +1,62 @@
+body {
+  background-color:blue;
+}
+body, table, table td {
+	border:0px;
+	border-collapse:collapse;
+	margin:0px;
+	padding:0px;
+}
+a {
+	color:#FFFF00;
+}
+button{
+  border:none;
+  background:none;
+  font-size: 24px;
+	font-weight: bold;
+  color: yellow;
+  width:100%;
+  height:100%;
+}
+button:hover,
+button:focus {
+    background: #0053ba;
+}
+#board {
+	margin-left:20px;
+	color:#FFFF00;
+}
+	#board #categories td {
+	background-color:darkblue;
+	background-image:none;
+	border:#FFFFFF solid 3px;
+}
+#board tr td{
+	height:100px;
+	width:180px;
+	border:#000000 solid 3px;
+	border-collapse:collapse;
+	text-align:center;
+	font-size:24px;
+}
+#container {
+	text-align:center;
+	padding:20px;
+	margin-right:20%;
+	margin-left:20%;
+}
+#points{
+	background-color:blue;
+	color: yellow;
+	border: none;
+	padding: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
+#score tr td{
+	height:100px;
+	width:180px;
+	text-align:center;
+	font-size:24px;
+}

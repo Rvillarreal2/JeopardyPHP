@@ -1,8 +1,15 @@
 <?php
 session_start();
-
+function Question() {
+	//replace conents of page with question and answers
+  echo "question from array";
+	echo "answer choices from array";
+	//if correct answer $score+$points from question array
+	//grey out cell
+	//return to gameboard
+}
     if(isset($_POST['point101'])){
-      //do php stuff 
+      Question();
     }elseif(isset($_POST['point102'])){
       //do php stuff  
     }elseif(isset($_POST['point103'])){
@@ -54,71 +61,11 @@ session_start();
     }
     ?>
 <!DOCTYPE html>
+<head>
+  <title>Project 2: Jeopardy</title>
+  <link type ="text/css" rel="stylesheet" href="style.css" />
+</head>
 <body>
-<style>
-body {
-background-color:blue;
-}
-body, table, table td {
-	border:0px;
-	border-collapse:collapse;
-	margin:0px;
-	padding:0px;
-}
-a {
-	color:#FFFF00;
-}
-button{
-  border:none;
-  background:none;
-  font-size: 24px;
-	font-weight: bold;
-  color: yellow;
-  width:100%;
-  height:100%;
-}
-button:hover,
-button:focus {
-    background: #0053ba;
-}
-#board {
-	margin-left:20px;
-	color:#FFFF00;
-}
-	#board #categories td {
-	background-color:darkblue;
-	background-image:none;
-	border:#FFFFFF solid 3px;
-}
-#board tr td{
-	height:100px;
-	width:180px;
-	border:#000000 solid 3px;
-	border-collapse:collapse;
-	text-align:center;
-	font-size:24px;
-}
-#container {
-	text-align:center;
-	padding:20px;
-	margin-right:20%;
-	margin-left:20%;
-}
-#points{
-	background-color:blue;
-	color: yellow;
-	border: none;
-	padding: 20px;
-	font-size: 24px;
-	font-weight: bold;
-}
-#score tr td{
-	height:100px;
-	width:180px;
-	text-align:center;
-	font-size:24px;
-}
-</style>
 <form method="post">
 <div id="container">
 <table id="board">
@@ -166,7 +113,8 @@ button:focus {
   </tr>
 </table>
 <table id="score">
-	<tr><td>Name: </td><td>Score: </td><td></td><td></td><td><button type="reset" value="Restart">Restart</button></td></tr>
+	<tr><td>Name: <?php echo "testname";?></td><td>Score: </td><td></td><td></td><td><button type="reset" value="Restart">Restart</button></td></tr>
+	<tr><td><a href="logout.php">Click here</a> to Logout.</td></tr>
 </table>
 </div>
 </form>
