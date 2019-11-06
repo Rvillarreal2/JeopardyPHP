@@ -62,6 +62,8 @@ session_start();
       //do php stuff  
     }elseif(isset($_POST['point505'])){
       //do php stuff  
+    }elseif(isset($_POST['reset'])){
+      $_SESSION["Score"]=0;
     }
     ?>
 <!DOCTYPE html>
@@ -185,7 +187,7 @@ button:focus {
   </tr>
 </table>
 <table id="score">
-	<tr><td>Name: </td><td>Score: <?php echo $_SESSION["Score"]?></td><td></td><td></td><td><button type="reset" value="Restart">Restart</button></td></tr>
+	<tr><td>Name: </td><td>Score: <?php echo $_SESSION["Score"]?></td><td></td><td></td><td><button name="reset" value="Restart">Restart</button></td></tr>
 </table>
 </div>
 </form>
