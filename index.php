@@ -1,8 +1,19 @@
 <?php
 session_start();
 
+  $questions = array("The tag used to declare an obect in JavaScript");
+  $answers = array("What is Var");
+  $_SESSION["Score"];
+  
+
+
     if(isset($_POST['point101'])){
-      //do php stuff 
+      //do php stuff
+      $_SESSION["Question"] = $questions[0];
+      $_SESSION["Answer"] = $answers[0];
+      $_SESSION["Points"] = 100;
+      
+      
     }elseif(isset($_POST['point102'])){
       //do php stuff  
     }elseif(isset($_POST['point103'])){
@@ -118,6 +129,14 @@ button:focus {
 	text-align:center;
 	font-size:24px;
 }
+#answered{
+  background-color:black;
+	color: black;
+	border: none;
+	padding: 20px;
+	font-size: 24px;
+	font-weight: bold;
+}
 </style>
 <form method="post">
 <div id="container">
@@ -130,7 +149,7 @@ button:focus {
     <td id="categories5">Data Structures</td>
   </tr>
   <tr id="row1">
-    <td id="row1_1"><button name="point101" onclick="this.disabled='disabled';">100</button></td>
+    <td id="row1_1"><a href="questionPage.php"><button name="point101" onclick="this.disabled='disabled';">100</button></a></td>
     <td id="row1_2"><button name="point102">100</button></td>
     <td id="row1_3"><button name="point103">100</button></td>
     <td id="row1_4"><button name="point104">100</button></td>
@@ -166,7 +185,7 @@ button:focus {
   </tr>
 </table>
 <table id="score">
-	<tr><td>Name: </td><td>Score: </td><td></td><td></td><td><button type="reset" value="Restart">Restart</button></td></tr>
+	<tr><td>Name: </td><td>Score: <?php echo $_SESSION["Score"]?></td><td></td><td></td><td><button type="reset" value="Restart">Restart</button></td></tr>
 </table>
 </div>
 </form>
