@@ -1,8 +1,10 @@
 <?php
 session_start();
+echo session_id();
 
-  $questions = array("The tag used to declare an obect in JavaScript");
-  $answers = array("What is Var");
+
+  $questions = array("The tag used to declare an obect in JavaScript", "The keyword used to declare a method");
+  $answers = array("What is Var", "What is Function");
   $_SESSION["Score"];
   
 
@@ -11,11 +13,9 @@ session_start();
       //do php stuff
       $_SESSION["Question"] = $questions[0];
       $_SESSION["Answer"] = $answers[0];
-      $_SESSION["Points"] = 100;
-      
-      
+      $_SESSION["Points"] = 100;      
     }elseif(isset($_POST['point102'])){
-      //do php stuff  
+      //do php stuff 
     }elseif(isset($_POST['point103'])){
       //do php stuff  
     }elseif(isset($_POST['point104'])){
@@ -24,6 +24,9 @@ session_start();
       //do php stuff  
     }elseif(isset($_POST['point201'])){
       //do php stuff  
+      $_SESSION["Question"] = $questions[1];
+      $_SESSION["Answer"] = $answers[1];
+      $_SESSION["Points"] = 200;
     }elseif(isset($_POST['point202'])){
       //do php stuff  
     }elseif(isset($_POST['point203'])){
@@ -158,7 +161,7 @@ button:focus {
     <td id="row1_5"><button name="point105">100</button></td>
   </tr>
   <tr id="row2">
-    <td id="row2_1"><button name="point201">200</button></td>
+    <td id="row2_1"><a href="questionPage.php"><button name="point201" onclick="this.disabled='disabled';">200</button></a></td>
     <td id="row2_2"><button name="point202">200</button></td>
     <td id="row2_3"><button name="point203">200</button></td>
     <td id="row2_4"><button name="point204">200</button></td>
