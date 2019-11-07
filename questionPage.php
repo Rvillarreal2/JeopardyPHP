@@ -1,6 +1,5 @@
 <?php
 session_start();
-echo session_id();
 ?>
 
 
@@ -20,7 +19,7 @@ body{
     background:black;
     color:black;
     border: none;
-    margin: 75px;
+    margin: 50px;
     padding:50px;
 }
 .answer:focus{
